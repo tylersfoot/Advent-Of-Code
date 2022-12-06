@@ -4,8 +4,7 @@ def day2p1():
   lines = f.readlines()
 
   for line in lines:
-    move1 = line.strip()[0]
-    move2 = line.strip()[2]
+    move1, move2 = line.strip()[0:2]
     
     # checks for tie
     if ((move1=='A' and move2=='X') or (move1=='B' and move2=='Y') or (move1=='C' and move2=='Z')):
