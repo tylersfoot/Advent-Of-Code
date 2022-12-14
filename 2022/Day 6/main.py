@@ -1,7 +1,6 @@
 def day6p1():
   with open('input.txt') as f:
     code = f.read()
-  print(code)
   buffer = ''
   bad = False
   for i in range(len(code)):
@@ -18,7 +17,7 @@ def day6p1():
         if bad:
           break
       if bad == False:
-        print(f'{str(i+1)} {buffer}')
+        print(f'{str(i)} {buffer}')
         return i
       else:
         buffer = buffer[1:] + code[i]
@@ -27,7 +26,6 @@ def day6p1():
 def day6p2():
   with open('input.txt') as f:
     code = f.read()
-  print(code)
   buffer = ''
   bad = False
   for i in range(len(code)):
@@ -43,7 +41,7 @@ def day6p2():
         if bad:
           break
       if bad == False:
-        print(f'{str(i+1)} {buffer}')
+        print(f'{str(i)} {buffer}')
         return i
       else:
         buffer = buffer[1:] + code[i]
