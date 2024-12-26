@@ -1,5 +1,8 @@
 // Advent of Code 2024 - Day 1
 //
+// Notes: its a pretty straightforward problem, probably can be
+// improved but its fine the way it is
+//
 // Provided: A text file with two lists of numbers, seperated by spaces
 //
 // Part 1: Difference
@@ -23,11 +26,10 @@ fn main() -> io::Result<()> {
 
     let mut difference = 0;
     let mut similarity = 0;
+    let mut list1: Vec<i64> = Vec::new();
+    let mut list2: Vec<i64> = Vec::new();
 
     if let Ok(lines) = read_lines(input_path) {
-        let mut list1: Vec<i64> = Vec::new();
-        let mut list2: Vec<i64> = Vec::new();
-
         // separate lines into two numbers and add them to lists
         for line in lines {
             if let Ok(content) = line {
